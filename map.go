@@ -254,7 +254,7 @@ func (d Map) Pick(include []string) Map {
 	out := make(Map)
 	for _, v := range include {
 		if vv := d.Get(v); vv != nil {
-			our[v] = vv
+			out[v] = vv
 		}
 	}
 	return out
