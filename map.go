@@ -298,9 +298,9 @@ func (d Map) ToMap() map[string]interface{} {
 }
 
 // JSON converts the map to a JSON string
-func (d Map) MarshalJSON() ([]byte, error) {
+/*func (d Map) MarshalJSON() ([]byte, error) {
 
-	result, err := json.Marshal(d)
+	result, err := json.Marshal(&d)
 
 	if err != nil {
 		err = errors.New("Map: JSON encode failed with: " + err.Error())
@@ -312,7 +312,7 @@ func (d Map) MarshalJSON() ([]byte, error) {
 
 func (d *Map) UnmarshalJSON(bs []byte) error {
 	return json.Unmarshal(bs, d)
-}
+}*/
 
 // Transform builds a new map giving the transformer a chance
 // to change the keys and values as it goes.
